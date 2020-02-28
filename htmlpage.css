@@ -1,7 +1,4 @@
 
-html {
-border:solid;
-}
 
 img{
 width: 125px;
@@ -27,7 +24,14 @@ background-color: white;
 
 }
 
-h1,h3{
+
+h1 {
+
+text-align: center;
+position: relative;
+font-color:red;
+}
+h3{
 
 text-align: center;
 

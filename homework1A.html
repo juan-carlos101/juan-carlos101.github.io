@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<title>JuanCarlos Giles Assignment1A</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="htmlpage.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+ 
+ $(document).ready(function(){
+  $("button","h1").click(function(){
+addClass("h1")
+ $("h1").animate({ color: 'red' });
+var curSize = $('h1').css('font-size');
+var biggerSize = parseFloat(curSize)*2;
+  $("h1").css('font-size', biggerSize);
+  $("h1").css('font-color', 'red');
+ var regSize = parseFloat(curSize)/2;
+ $("h1").css('font-size', regSize);
+
+</script>	
+</head>
+
+<body>
+
+<h1>Simple HTML & CSS Page</h1>
+
+
+<img src="Me.jpg" alt="My Picture" >
+
+<p> My name is Juan Carlos and I have been a student at CSM for a little more than 2 years now. Since I was young I always had an intest in computers.
+I have been playing videogames since I was 3 years old and playing soccer since I was 4. Other intrests of mine include running, hiking, exercising, going to 
+different places and taking pictures. 
+
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<p>I am attending this class because I want to improve my knowledge using html, CSS, and JavaScript. My focus would be to be better on app based projects as that has been 
+an area of weakness. I have taken web development courses before one of them being an intro class so I do have prior knowledge. Another reason for me attending this class is 
+to complete part of my major requirement for my associates degree here at CSM. 
+
+</p>
+
+<h3>Technologies for this class</h3>
+
+<ul>
+
+<li>HTML</li>
+
+<li>CSS</li>
+
+<li>JavaScript</li>
+
+</ul>
+
+<h3> Resources</h3>
+
+<ul>
+
+<li><a href="https://www.khanacademy.org">khanacademy.org</a> : This website gives you resourses and helps you start with the basics of html, CSS, and javascript
+
+</li>
+
+<li><a href="http://www.w3schools.com">w3schools.com</a> : This website provides you with many resources to improve web development techniques and other various forms of syntax
+
+
+</li>
+
+</ul>
+
+
+<button id="button">Start Animation</button>
+
+</body>
+
+
+</html>
