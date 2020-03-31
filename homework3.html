@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Homework 3</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.js"></script>
+</head> 
+
+<body> 
+
+<!-- Start of first page -->
+<div data-role="page" id="Home">
+
+	<div data-role="header">
+		<h1>ABC Toys Products</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+          	<div data-role="collapsible" id="cs" data-collapsed-icon="info"   >
+            <h3>About Us</h3>
+            
+           <p>ABC Toys is a company that opened its doors in 2001 and it has kept its mission for all those years.<br>
+The mission of our company is to create toys that are safe for kindergarten kids but that challenge the kids' mind and motor skills<br> making learning a fun task.By the way, parents love our toys too</p>
+          </div>
+
+			<div data-role="collapsible" id="ps" data-collapsed-icon="info"   >
+            <h3>Playstation 4</h3>
+            <img src="imageshw3/PlayStation4.jpeg" alt="PlayStation" width="200" height="200">
+            <p>The best selling entertainment hardware on the current gaming market. Enjoy top notch graphics,<br> performence, and gaming experience</p>
+          </div>
+	      
+	       <div data-role="collapsible" id="ds" data-collapsed-icon="info"    >
+            <h3>DualShock 4 Controller</h3>
+            <img src="imageshw3/dualshock.jpeg" alt="Dualshock" width="200" height="200">
+            <p>The best tool for the best sellin console. Intuitive design built to last. Improvments over dualshock 3 include newly added touchpad<br>
+            increased battery life, improved grip, and hardware functionality</p>
+          </div>
+
+          <div data-role="collapsible" id="hx" data-collapsed-icon="info"    >
+            <h3>HyperX Headset</h3>
+            <img src="imageshw3/hyperx.jpeg" alt="HyperX" width="200" height="200">
+            <p> A must have headset with multiple devices supported including the playstation 4, when playing online or with friends the hyper x headset<br>
+            will allow you to play for hours without feeling the strain of wearing a normal headset</p>
+          </div>
+
+
+	</div><!-- /content -->
+
+<p>Click the button to get your location.</p>
+
+<button onclick="getLocation()">Location</button>
+
+<p id="Location"></p>
+
+<script>
+var x = document.getElementById("Location");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+</script>
+
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h3> Contact Us</h3>
+    <p> ABCtoys@toysrus.com
+        <br>650-927-2165
+        <br>123 Toy Drive, San Mateo CA  94403
+        <br>www.Facebook.com/ABCtoys/ </p>
+    <h4>Enter user info</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Comments..." tabindex="3" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+    </form>
+</div>
+
+<div data-role="content">	
+          	<div data-role="collapsible" id="cs" data-collapsed-icon="plus"   >
+            <h3>Extra</h3>
+        <h2>Extra</h2>
+
+<table>
+  <tr>
+    <th>WURFL database capabilities(3)</th>
+    <th>Description</th>
+    
+  </tr>
+  <tr>
+    <td>complete_device_name</td>
+    <td>This capability is similar to brand_name but in this instance it links together<br>the brand name, model name, and marketing name of the device. </td>
+    
+  </tr>
+  <br>
+  <tr>
+    <td>device_os</td>
+    <td> This static capabity is very simple but very important in that it is able to identify the OS of the device being used<br>
+    whether that be iOSiPhone OS, Android, OS windows phone, ect.</td>
+    
+  </tr>
+  <tr>
+    <td>is_wireless_device</td>
+    <td> Important static capability that will ring true if the device is wireless. Wireless meaning that it uses <br> 
+    WiFi,3G, LTE, with a focus on mobile and tablet devices. Meaning that it would not count a desktop PC or Laptop</td>
+    
+  </tr>
+</table>
+
+        </div>
+    </div>
+
+	<div data-role="footer">
+		<a href="contact.html">ContactUs</a>
+		<a href="location.html">Location</a>
+		<a href="Extra.html">Extra</a>
+		<h4></h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
