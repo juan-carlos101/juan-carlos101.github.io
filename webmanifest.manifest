@@ -1,0 +1,22 @@
+{
+    "name": "My App",
+    "short_name": "my app",
+    "description": "First attempt at creating a pwa using web manifest.",
+    "images": [
+        {
+            "src": "lightblue.jpg",
+            "sizes": "2444x1636",
+            "type": "image/jpg"
+        },
+        
+        {
+            "src": "lightgold.jpg",
+            "sizes": "612x408",
+            "type": "image/jpg"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color": "white",
+    "background_color": "white"
+}

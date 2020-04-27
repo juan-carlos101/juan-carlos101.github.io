@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+<title>Homework 4</title> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <link rel="manifest" href="webmanifest.manifest">
+    <script src="service-worker.js"></script>
+  <!--- <script src="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.js"></script>--->
+
+<h2>Main Characteristics of a PWA </h2>
+<p>
+   There are many characteristics that can be mentioned when speaking of PWA's, the first that many come to mind is just how reliable they are. 
+   These types of web apps do not require much if any network dependence, meaning that they will load at a fast rate giving the user an instant experience.
+   Toughing a bit more on that last part it bring is to another related characteristic which is that PWA's are fast. All the info is loaded and with the cache key aspects of the web app. These types of app can be instantly brought to the homescreen without the need to enter the app store and can be used in hand with web push notifications. 
+</p>
+<br>
+<p>
+The characteristics mentioned above are more notworthy to the user but there are some that I can mention that relates to the person making the app. When making an app the creator wants everyone to have it with them and so well built apps will be easier to get onto a users homescreen. Theses apps are also, like I mentioned above, reliable so that no matter the network status key areas will still be available because of the service worker. Since push notification are more prominent in this area it allows for more communcation depending on how you choose to use the feature atrracting more users to your PWA.
+</p>
+
+</head> 
+  
+<body> 
+<script>
+//function below allows the background image to change based on when the button is pressed
+//the form written below holds the id 'select' which contains the 2 images given
+//the button created is of course paired with the function
+function ChangeBackgroundColor() {
+  if(document.getElementById("Select").value == "lightBlue") {
+    document.body.style.background = "url('lightblue.jpg')";
+  }
+  if(document.getElementById("Select").value == "lightGold") {
+    document.body.style.background = "url('lightgold.jpg')";
+    
+  }
+}
+if ('serviceworker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+        }
+
+</script>
+<form>
+  <!--  Select element defines a drop down list --->
+  Change Background Color:
+  <select id="Select">
+    <option value="lightBlue">Light Blue</option>
+    <option value="lightGold">Light Gold</option>
+  </select>
+</form>
+
+<button type="button" onclick="ChangeBackgroundColor()">Select Background</button>    
+</body> 
+  
+</html>                     
